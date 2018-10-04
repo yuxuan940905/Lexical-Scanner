@@ -1,0 +1,25 @@
+﻿This is a test of terminate;
+
+#if
+{  
+  temp.Append(String.Format("{0,-5}", endLine.ToString()));    // line of scope end
+  temp.Append("}");
+  return temp.ToString();
+}
+{
+  StringBuilder temp = new StringBuilder();
+  temp.Append("{");
+  temp.Append(String.Format("{0,-10}", type)).Append(" : ");
+  temp.Append(String.Format("{0,-10}", name)).Append(" : ");
+  temp.Append(String.Format("{0,-5}", beginLine.ToString()));  // line of scope start
+  temp.Append(String.Format("{0,-5}", endLine.ToString()));    // line of scope end
+  temp.Append("}");
+  return temp.ToString();
+}
+
+int i;
+// a C++ comment
+double d;
+char ch = '\n';
+string s = "\n";
+#endif
